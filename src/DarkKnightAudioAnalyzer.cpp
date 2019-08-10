@@ -24,7 +24,6 @@
 
 void DarkKnightAudioAnalyzer::setup()
 {
-    
     smooth = power = 0.0;
     
     int sampleRate = 44100;
@@ -33,7 +32,6 @@ void DarkKnightAudioAnalyzer::setup()
     int inChannels = 2;
     
     // setup the sound stream
-    
     
     ofSoundStreamSettings streamSettings;
     streamSettings.sampleRate = 44100;
@@ -74,9 +72,8 @@ void DarkKnightAudioAnalyzer::audioIn(ofSoundBuffer &inBuffer){
 
 void DarkKnightAudioAnalyzer::unMount()
 {
-    
     soundStream.stop();
     soundStream.close();
-//    audioAnalyzer.exit();
+    audioAnalyzer.exit();
 }
 
